@@ -10,10 +10,10 @@ RUN apt-get update && \
         build-essential \
         python3-dev \
         python3-setuptools \
-        tesseract-orc \
+        tesseract-ocr \
         make \
         gcc \
-    python3 -m pip install -r requirements.txt \
+    && python3 -m pip install -r requirements.txt \
     && apt-get remove -y --purge make gcc bui;d-essential \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
